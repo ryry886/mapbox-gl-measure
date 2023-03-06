@@ -1,0 +1,47 @@
+{
+  "name": "maplibre-gl-measures",
+  "version": "0.0.7",
+  "description": "Length and area measurements with linestrings and polygons",
+  "main": "src/maplibre-gl-measures.js",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryry886/mapbox-gl-measure"
+  },
+
+  "keywords": [
+    "maplibre",
+    "maplibre-gl-js",
+    "mapbox",
+    "mapbox-gl-js",
+    "length",
+    "distance",
+    "area",
+    "measures"
+  ],
+  "dependencies": {
+    "@mapbox/mapbox-gl-draw": "^1.4.1",
+    "@turf/area": "^6.5.0",
+    "@turf/centroid": "^6.5.0",
+    "@turf/helpers": "^6.5.0",
+    "@turf/length": "^6.5.0",
+    "@turf/line-segment": "^6.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "rollup": "^3.18.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "author": "Jorge Santos <https://jdsantos.github.io>",
+  "license": "MIT"
+}
