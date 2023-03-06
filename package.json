@@ -1,5 +1,5 @@
 {
-  "name": "mapbox-gl-measures",
+  "name": "@ryry886/mapbox-gl-measures",
   "version": "0.0.1",
   "description": "Length and area measurements with linestrings and polygons",
   "main": "index.js",
