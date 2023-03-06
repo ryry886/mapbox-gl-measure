@@ -28,33 +28,35 @@ npm install @ryry886/mapbox-gl-measure
 ```js
 let measure = new MapboxMeasure(map, {
    language:"cn",
-   areaStyle:{
-    "fillColor":"#000",
-    "fill-opacity": 0.1,
-    "fillOutlineColor":"#000"
-   },
-   lengthStyle:{
-    "line-width": 2,
-    "lineColor": "#D20C0C",
-   },
-   pointStyle:{ 
-    "midPointRadius":6,
-    "midPointColor":"#fbb03b",
-    "midPointHaloRadius":8,
-    "midPointHaloColor"：'#FFF',
-   },
-   textStyle:{ 
-    "radialOffset":0.5,
-    "textSize":14,
-    "letterSpacing":0.05,
-    "textColor":'#D20C0C',
-    "textHaloColor":'#fff',
-    "textHaloWidth":2,
-    "vertexHaloRadius":4,
-    "vertexHaloColor":"#fff",
-    "vertexRadius":2,
-    "vertexColor":"#D20C0C"
-   }
+   style:{
+     areaStyle:{
+        "fillColor":"#000",
+        "fillOpacity": 0.1,
+        "fillOutlineColor":"#000"
+    },
+    lengthStyle:{
+        "lineWidth": 2,
+        "lineColor": "#D20C0C",
+    },
+    pointStyle:{ 
+        "midPointRadius":6,
+        "midPointColor":"#fbb03b",
+        "midPointHaloRadius":8,
+        "midPointHaloColor"：'#FFF',
+    },
+    textStyle:{ 
+        "radialOffset":0.5,
+        "textSize":14,
+        "letterSpacing":0.05,
+        "textColor":'#D20C0C',
+        "textHaloColor":'#fff',
+        "textHaloWidth":2,
+        "vertexHaloRadius":4,
+        "vertexHaloColor":"#fff",
+        "vertexRadius":2,
+        "vertexColor":"#D20C0C"
+    }
+ }
 });
 
 ```

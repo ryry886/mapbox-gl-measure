@@ -1,8 +1,8 @@
 {
-  "name": "maplibre-gl-measures",
-  "version": "0.0.7",
+  "name": "mapbox-gl-measures",
+  "version": "0.0.1",
   "description": "Length and area measurements with linestrings and polygons",
-  "main": "src/maplibre-gl-measures.js",
+  "main": "index.js",
   "type": "module",
   "files": [
     "dist"
@@ -42,6 +42,6 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0"
   },
-  "author": "Jorge Santos <https://jdsantos.github.io>",
+  "author": "ryry886",
   "license": "MIT"
 }
