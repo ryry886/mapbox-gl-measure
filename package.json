@@ -1,12 +1,9 @@
 {
-  "name": "@ryry886/mapbox-gl-measures",
+  "name": "@ryry886/mapbox-gl-measure",
   "version": "0.0.1",
   "description": "Length and area measurements with linestrings and polygons",
-  "main": "index.js",
+  "main": "dist/mapbox-gl-measure.js",
   "type": "module",
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "rollup -c"
   },
