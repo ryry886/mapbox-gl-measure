@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Display a map</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+<script src="/dist/mapbox-gl-measure.js"></script>
+<link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+<style>
+	body { margin: 0; padding: 0; }
+	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<button style="position: absolute; right:10px;z-index:999;top:10px;" onclick="mylength()">长度测量</button>
+<button style="position: absolute; right:10px;z-index:999;top:50px;" onclick="myarea()">面积测量</button>
+<button style="position: absolute; right:10px;z-index:999;top:90px;" onclick="myclear()">清空</button>
+<button style="position: absolute; right:10px;z-index:999;top:130px;" onclick="mystop()">停止</button>
+<div id="map"></div>
+<script  >
+  var measure=null;
+    var map = new maplibregl.Map({
+    container: 'map', // container id
+    style: 'https://demotiles.maplibre.org/style.json', // style URL
+    center: [114, 31], // starting position [lng, lat]
+    zoom: 4 // starting zoom
+    });
+    map.on("load",()=>{
+    measure= new MapboxMeasure({
+   //language:"cn"
+    })
+    measure.addTo(map); // mapbox-gl or maplibre map 
+    
+})
+function mylength(){
+    measure.start("distance")
+}
+function myarea(){
+    measure.start("area")
+}
+function myclear(){
+    measure.clear()
+}
+function mystop(){
+    measure.stop()
+}
+</script>
+ 
+</body>
+</html>

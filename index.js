@@ -14,7 +14,7 @@ const SOURCE_DATA = {
   type: "FeatureCollection",
   features: []
 };
-export default class MeasuresControl {
+export default class MapboxMeasure {
 
   constructor(options) {
     this.options = options;
@@ -159,11 +159,6 @@ export default class MeasuresControl {
       ]
     });
   }
-  test(){
-    setInterval(()=>{
-      console.log(123);
-    },500)
-  }
   start(mode){
     switch(mode){
       case "distance":
@@ -186,8 +181,8 @@ export default class MeasuresControl {
   }
   addTo(map) {
     this._map = map;
-    this._map.addControl(this._drawCtrl);
     this._addSymbolLayer();
+    this._map.addControl(this._drawCtrl);
     this._registerEvents();
     return this;
   }
@@ -258,11 +253,11 @@ export default class MeasuresControl {
       'filter':  ['==', ['get','visible'], true],
       'layout': {
 
-      },
-      'paint': {
-        "circle-radius": this.options?.style?.pointStyle?.vertexHaloRadius ?? 4,
-        "circle-color": this.options?.style?.pointStyle?.vertexHaloColor ?? "#fff",
-      },
+        },
+        'paint': {
+          "circle-radius": this.options?.style?.pointStyle?.vertexHaloRadius ?? 4,
+          "circle-color": this.options?.style?.pointStyle?.vertexHaloColor ?? "#fff",
+        },
     });
     this._map.addLayer({
       'id': MEASURE_POINTS_LAYER_ID,

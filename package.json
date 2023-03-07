@@ -5,13 +5,13 @@
   "main": "dist/mapbox-gl-measure.js",
   "type": "module",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "serve": "rollup -c -w"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/ryry886/mapbox-gl-measure"
   },
-
   "keywords": [
     "maplibre",
     "maplibre-gl-js",
@@ -34,10 +34,11 @@
     "@babel/core": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
     "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.4.0",
     "rollup": "^3.18.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "rollup-plugin-serve": "^2.0.2"
   },
   "author": "ryry886",
   "license": "MIT"
